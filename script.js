@@ -55,12 +55,13 @@ function playRound() {
         playerWins = playerWins + 1;
     }
     else {
-        alert("Computer wins this round...");
+        alert(`Computer chose ${computerSelection}. Machines win this round...`);
         computerWins = computerWins + 1;
     }
 }
 
 function game() {
+    alert("Beat the computer in a best out of five round of rock, paper, scissors to save Sarah Connor.");
     for (i = 0; i < 6; i++) {
         if (playerWins === 3) {
             alert("The humans live on, for now...")
