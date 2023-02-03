@@ -15,3 +15,14 @@ function getComputerChoice() {
     }
 }
 
+function getPlayerChoice() {
+    let x = prompt("Choose rock, paper, or scissors");
+    x = x.toLowerCase();
+    if (x === "rock" || x === "paper" || x === "scissors") {
+        return playerSelection = x;
+    }
+    else {
+        alert("Invalid Selection")
+        return playerSelection = null;
+    }
+}
