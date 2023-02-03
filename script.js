@@ -30,20 +30,30 @@ function getPlayerChoice() {
 let playerWins = 0;
 let computerWins = 0;
 
-function playRound() {
-    for (n = 0;; n++) {
-        getComputerChoice();
-        console.log(computerSelection)
-        getPlayerChoice();
-        if (playerSelection === null) {
+for (i = 0; i < 5; i++) {
+    if (playerWins === 3) {
+        alert("The humans live on, for now...")
+    }
+    else if (computerWins === 3) {
+        alert("The machines win. Program terminated.")
+    }
+    else {
+        function playRound() {
+            for (n = 0;; n++) {
+                getComputerChoice();
+                console.log(computerSelection)
+                getPlayerChoice();
+                if (playerSelection === null) {
             
-        }
-        else if (playerSelection !== computerSelection && playerSelection !== null) {
-            break;
-        }
-        else {
-            alert(`Player and Computer chose ${computerSelection}, choose again.`)
+                }
+                else if (playerSelection !== computerSelection && playerSelection !== null) {
+                    break;
+                }
+                else {
+                    alert(`Player and Computer chose ${computerSelection}, choose again.`)
+                }
+            }
+            console.log(playerSelection, computerSelection);
         }
     }
-    console.log(playerSelection, computerSelection);
 }
